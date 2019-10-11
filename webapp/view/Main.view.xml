@@ -3,15 +3,19 @@
 	<App id="idAppControl">
 		<pages>
 			<Page title="{i18n>title}">
-				<content>
-					<Text text="{i18n>appTitle}"></Text>
-					<html:br></html:br>
-					<Text text="{i18n>appDescription}"></Text>
-					<html:br></html:br>
-					<Text text="{foobar>/foo}"></Text>
-					<html:br></html:br>
-					<Text text="{foobar>/bar}"></Text>
-				</content>
+				<Panel headerText="{i18n>titleDeposit}">
+					<Label id="depositLabel" text="{i18n>labelDepositAmount}" labelFor="depositInput"/>
+					<Input id="depositInput" type="Number"/>
+					<Button id="depositButton" text="{i18n>buttonDepositAmount}" press="onPressDeposit"/>
+				</Panel>
+				<Panel headerText="{i18n>titlePay}">
+					<Label id="payLabel" text="{i18n>labelPayAmount}" labelFor="depositInput"/>
+					<Input id="payInput" type="Number"/>
+					<Button id="payButton" text="{i18n>buttonPayAmount}" press="onPressPay"/>
+				</Panel>
+				<Panel headerText="{i18n>titleAmount}">
+					<Title id="amountTitle" text="0"/>
+				</Panel>
 			</Page>
 		</pages>
 	</App>

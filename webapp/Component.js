@@ -1,10 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
-	"sap/ui/Device",
 	"my/ui5app/model/models",
 	"sap/m/routing/Router",
 	"sap/ui/core/ComponentSupport"
-], function (UIComponent, Device, models) {
+], function (UIComponent, models) {
 	"use strict";
 
 	return UIComponent.extend("my.ui5app.Component", {
@@ -27,10 +26,6 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-
-			// set the foobar model
-			this.setModel(models.createFooBarModel(), "foobar");
-
 		}
 
 	});

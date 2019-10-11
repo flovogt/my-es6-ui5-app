@@ -1,6 +1,6 @@
 sap.ui.define([], function() {
 
-	return class Bar {
+	return class Base {
 		constructor(prop) {
 			this.prop = prop;
 		}
